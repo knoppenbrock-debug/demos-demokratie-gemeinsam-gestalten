@@ -1,0 +1,6 @@
+instrument,trigger,threshold,decision_rule,turnout_quorum,counterproposal,review,status,caveat
+agenda_initiative,supporters,100000,parliamentary_public_treatment,false,not_applicable,legal_precheck,settled_design,"exact deadlines open"
+optional_legislative_referendum,percent_previous_bundestag_electorate,0.5,majority_valid_votes,false,not_applicable,to_be_defined,settled_design,"deadline and emergency rules open"
+popular_ordinary_law_initiative,percent_previous_bundestag_electorate,1.0,majority_valid_votes,false,yes,complex_cases,settled_design,"details of Bundesrat interaction open"
+popular_constitutional_initiative,percent_previous_bundestag_electorate,2.0,"popular_majority_plus_federal_support",false,yes,mandatory,partly_open,"exact federal threshold open; 28/69 only a high-risk tested value"
+parliamentary_constitutional_amendment,"2/3 Bundestag + 2/3 Bundesrat",not_applicable,"mandatory_popular_majority_after_parliamentary_approval",false,not_applicable,mandatory,settled_design,"requires constitutional change from current law"
