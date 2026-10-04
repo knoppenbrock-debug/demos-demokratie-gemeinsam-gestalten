@@ -1,0 +1,187 @@
+project:
+  name: "DEMOS – Demokratie gemeinsam gestalten"
+  version: "0.1"
+  date: "2026-10-04"
+  jurisdiction: "Germany"
+  status: "red-team constitutional design"
+  authoritative_language: "de"
+  purpose: >
+    Combine representative, direct and deliberative democracy while protecting
+    human dignity, rule of law, minority rights, federalism, parliamentary
+    accountability and institutional capacity to act.
+
+epistemic_layers:
+  - id: current_law
+    meaning: "geltendes deutsches Recht"
+  - id: comparative_reference
+    meaning: "ausländische institutionelle Referenz"
+  - id: settled_design
+    meaning: "im DEMOS-Arbeitsstand beschlossenes Designelement"
+  - id: open_design
+    meaning: "noch offene Designfrage"
+  - id: high_risk
+    meaning: "verfassungsrechtlich oder systemisch besonders prüfbedürftig"
+
+constitutional_baseline:
+  article_20_2:
+    status: current_law
+    proposition: "State authority is exercised by the people through elections and votes and through constitutional organs."
+  article_21:
+    status: current_law
+    proposition: "Political parties participate in forming the political will of the people."
+  article_79_2:
+    status: current_law
+    bundestag_threshold: "two_thirds_members"
+    bundesrat_threshold: "two_thirds_votes"
+  article_79_3:
+    status: current_law
+    protected:
+      - "federal division into Länder"
+      - "fundamental participation of Länder in legislation"
+      - "principles of Articles 1 and 20"
+
+instruments:
+  agenda_initiative:
+    threshold:
+      type: absolute_supporters
+      value: 100000
+    effect:
+      - "official procedure status"
+      - "formal and legal preliminary review"
+      - "public parliamentary consideration"
+      - "documented political response"
+    status: settled_design
+    deadlines: null
+
+  optional_legislative_referendum:
+    threshold:
+      type: percentage_of_previous_bundestag_electorate
+      value: 0.5
+      unit: percent
+    purpose: "binding citizen correction of enacted federal legislation"
+    turnout_quorum: false
+    status: settled_design
+    collection_deadline: null
+    emergency_exception: null
+
+  popular_ordinary_law_initiative:
+    threshold:
+      type: percentage_of_previous_bundestag_electorate
+      value: 1.0
+      unit: percent
+    flow:
+      - "support verification"
+      - "admissibility review"
+      - "parliamentary consideration"
+      - "adopt_reject_or_counterproposal"
+      - "popular_vote_if_required"
+    popular_decision:
+      rule: "majority_of_valid_votes"
+      turnout_quorum: false
+    status: settled_design
+
+  popular_constitutional_initiative:
+    threshold:
+      type: percentage_of_previous_bundestag_electorate
+      value: 2.0
+      unit: percent
+    required:
+      - "constitutional admissibility review"
+      - "mandatory deliberative review"
+      - "nationwide popular majority"
+      - "additional federal support"
+    turnout_quorum: false
+    federal_threshold:
+      value: null
+      status: open_design
+    tested_value:
+      model: "Article_51_weighted_votes"
+      value: 28
+      denominator: 69
+      status: high_risk
+      caveat: "not current law, not proven optimal, not claimed constitutionally valid"
+
+  parliamentary_constitutional_amendment:
+    bundestag: "two_thirds_members"
+    bundesrat: "two_thirds_votes"
+    deliberative_review: "mandatory"
+    popular_referendum: "mandatory"
+    popular_rule: "majority_of_valid_votes"
+    turnout_quorum: false
+    status: settled_design
+
+counterproposal:
+  status: settled_design
+  same_subject_required: true
+  ballot:
+    initiative: "yes_no"
+    counterproposal: "yes_no"
+    tie_break: "initiative_or_counterproposal"
+  both_rejected: "status_quo"
+  source_model: "Swiss direct counterproposal"
+
+deliberative_review:
+  constitutional_amendments: "mandatory"
+  complex_nationwide_proposals: "intended"
+  working_panel_size: 120
+  selection: "stratified_random"
+  lawmaking_power: false
+  veto_power: false
+  outputs:
+    - "facts"
+    - "disputed factual questions"
+    - "normative conflicts"
+    - "expected consequences"
+    - "uncertainties"
+    - "minority positions"
+  participation_support:
+    - "compensation"
+    - "leave or equivalent support"
+    - "care support"
+    - "accessibility"
+
+protected_core:
+  status: settled_design
+  items:
+    - "human dignity"
+    - "principles of Articles 1 and 20"
+    - "democracy"
+    - "rule of law"
+    - "federal statehood"
+    - "existence of Länder as constituent states"
+    - "fundamental Länder participation in legislation"
+
+digital_participation:
+  verified_digital_support:
+    status: settled_design
+    enabled: true
+  analogue_support:
+    status: settled_design
+    enabled: true
+  online_voting:
+    status: open_design
+    enabled: null
+    caveat: "digital support collection does not imply online voting"
+
+open_questions:
+  - "exact federal threshold for citizen-initiated constitutional amendments"
+  - "referendum and procedure deadlines"
+  - "colliding initiatives"
+  - "standstill periods after popular decisions"
+  - "campaign finance and political advertising"
+  - "independent DEMOS administrative body"
+  - "citizens-review calibration"
+  - "technical digital-support architecture"
+  - "EU-law and subsidiarity interactions"
+  - "emergency legislation and referendum effects"
+
+anti_hallucination:
+  claims_not_made:
+    - "current Basic Law already provides general federal popular legislation"
+    - "Article 20(2) alone creates an immediately usable federal referendum process"
+    - "political parties are constitutionally dispensable"
+    - "a simple majority may abolish the protected constitutional core"
+    - "the Swiss model can be copied unchanged"
+    - "28/69 is constitutionally validated"
+    - "digital signatures imply online voting"
+    - "more direct democracy automatically produces better policy"
