@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use or discuss this constitutional-design model, please cite it using the metadata below."
+title: "DEMOS – Demokratie gemeinsam gestalten"
+type: report
+authors:
+  - family-names: "Knoppenbrock"
+version: "0.1"
+date-released: "2026-10-04"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/knoppenbrock-debug/demos-demokratie-gemeinsam-gestalten"
+url: "https://github.com/knoppenbrock-debug/demos-demokratie-gemeinsam-gestalten"
+abstract: >-
+  An open and falsifiable constitutional-design model for Germany that explores
+  how representative, direct and deliberative democracy could be combined while
+  protecting human dignity, minority rights, the rule of law, federalism and
+  institutional capacity to act.
+keywords:
+  - democracy
+  - direct democracy
+  - deliberative democracy
+  - Germany
+  - constitutional design
+  - referendum
+  - citizens assembly
+  - federalism
+  - public policy
+  - civic participation
